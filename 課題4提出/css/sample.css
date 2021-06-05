@@ -1,0 +1,403 @@
+/* html,bodyの設定をする */
+html, body{
+  height:50%;
+  margin:0;
+  padding:0;
+  z-index: 10; 
+}
+/* ヘッダーの設定をする */
+header {
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  height: 36px;
+  padding-top:4px; 
+  background-color: #ff6928; 
+  color: white; 
+}
+header h1{
+  font-size:35px;
+}
+h1 {
+  font-size: 100%;
+}
+/* topwrapper(上部全体)部分の設定--------------------------------------------------*/
+.top-wrapper{
+  height:760px;
+  display: flex;
+}
+/* 上部左の設定 */
+.items{
+  height:760px;
+  border:2px solid #ff6928;
+  width:20%;
+}
+/* プロフィール写真の設定 */
+.prof{
+  height:130px;
+  display: flex;
+  margin-top: 15px;
+}
+.prof p{
+  font-size:25px;
+  padding-top:55px;
+  padding-left:20px;
+}
+.prof-image{
+  padding-top:10px;
+  padding-left:10px;
+}
+.prof-image1{
+  width: 110px;
+  height:110px;
+  border-radius: 70px;
+}
+/* (ひとりで)(みんなで)ボタンの設定ーーーーーーーーーーーーーーーーーーー */
+.design{
+  height: 60px;
+  width:85%;
+  margin:10px auto;
+}
+.design-botan{
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 10px;
+  height: 60px;
+}
+.design-botan p{
+  height: 30px;
+  padding-top: 10px;
+  width: 50%;
+  text-align: center
+}
+#me{
+  width: 50%;
+  height: 40px;
+  color: white;
+  background-color: #ff6928;
+  font-size: 20px;
+  border-radius: 10px;
+}
+#me:hover{
+  opacity:0.7;
+}
+#our{
+  width: 50%;
+  height: 40px;
+  color: white;
+  background-color: #ff6928;
+  font-size: 20px;
+  border-radius: 10px;
+}
+#our:hover{
+  opacity:0.7;
+}
+/* 天気部分の設定ーーーーーーーーーーーーーーーーーーー */
+.weather{
+  height:510px;
+}
+/* 今日の天気 */
+.today-weather{
+  width: 100%;
+  height:320px;
+  text-align: center;
+ 
+}
+/* 直近の天気 */
+.forecast{
+  width: 100%;
+  display: flex;
+  height:230px;
+  text-align: center;
+
+}
+.tomorrow{
+  width: 50%;
+  height:230px;
+}
+#cityName{
+  font-size:28px;
+  padding: 10px;
+}
+#picture img{
+  width:140px;
+  height:140px;
+}
+/* 天気マーク画像の設定 */
+#forecast-picture1 img{
+  width:80px;
+  height:80px;
+}
+/* 直近から3時間後の天気 */
+.dayafter{
+  height:230px;
+  width: 50%;
+}
+/* 上部真ん中map部分の設定 */
+.map{
+  height:760px;
+  border:2px solid #ff6928;
+  width:50%;
+}
+/* 上部右保存部分の設定 */
+.image{
+  height:760px;
+  border:2px solid #ff6928;
+  width:30%;
+  z-index: 1;
+  text-align: center;
+}
+.image1{
+  height:250px;
+  width:90%;
+  margin-left: 25px;
+  margin-top: 35px;
+}
+.image1 h1{
+  margin-top: 5px;
+  font-size:20px;
+}
+#activeimage1{
+  padding: 7px 70px;
+  border:1px solid #ff6928;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #ff6928;
+}
+#activeimage2{
+  padding: 7px 70px;
+  border-radius: 10px;
+  border:1px solid #ff6928;
+  box-shadow: 0 0 5px #ff6928;
+}
+/* マップボタンの設定 */
+.past{
+  display: flex;
+  width:100%;
+  margin-top: 10px;
+}
+.past1{
+  width:80%;
+}
+.past2{
+  width:20%;
+  padding-top: 65px;
+}
+#images1{
+  color: white;
+  background-color: #ff6928;
+  font-size: 20px;
+  border-radius: 10px;
+  padding:8px;
+}
+#images1:hover{
+  opacity:0.7;
+}
+.pastnext{
+  padding-top:8px;
+}
+.pastnext1{
+  display: flex;
+  margin: 0 auto;
+  margin-top: 5px;
+  width:100%;
+  margin-right:8px;
+}
+#pastplace1{
+  width: 50%;
+  height: 40px;
+  color: white;
+  background-color: #ff6928;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+#pastplace1:hover{
+  opacity:0.7;
+
+}
+#pastplace2{
+  width: 50%;
+  height: 40px;
+  color: white;
+  background-color: #ff6928;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+#pastplace2:hover{
+  opacity:0.7;
+}
+#forecast-picture2 img{
+  width:80px;
+  height:80px;
+}
+/* チャットボットの設定 */
+.image2{
+  height:420px;
+  width:90%;
+  margin-left: 25px;
+
+  margin-top: 25px;
+}
+.robot{
+
+  border-radius:10px 10px 0px 0px;
+  height:50px;
+  background-color: #ff6928;
+  padding-top: 5px;
+
+}
+.robot h1{
+  margin-top: 10px;
+  color: white;
+  font-size: 25px;
+}
+.robotchat{
+
+  height:320px;
+  background-image: url(../imgs/6.png);
+  background-size: cover;
+
+}
+.ai10{
+
+  height:50px;
+  
+
+}
+.ai11{
+
+  height:50px;
+}
+#talkme{
+
+  height:30px;
+  width:50%;
+  margin-left:190px;
+  background-color: #ffAD90;
+  border-radius:10px;
+  margin-top:5px;
+  padding-top: 18px;
+  font-size: 17px;
+  
+}
+#talkapi__reply{
+
+  height:30px;
+  width:50%;
+  background-color: #ffAD90;
+  border-radius:10px;
+  margin-top:5px;
+  padding-top: 18px;
+  font-size: 17px;
+}
+.robotsend{
+
+  height:50px;
+  background-color: #ff6928;
+  border-radius:0px 0px 10px 10px ;
+}
+.ai{
+  padding-top: 6px;
+  
+}
+#talkapi__input{
+  padding:8px 70px;
+  border-radius:10px;
+}
+#talkapi__request{
+  padding:5px 20px;
+  border-radius:10px;
+  color: white;
+  background-color: #ff6928;
+}
+
+/* フッターの設定 */
+footer {
+  background-color: #ff6928;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  color: white;
+  padding:7px;
+  font-size: 12px;
+}
+ /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }    
+/* モーダル部分の設定を指定する */
+  .modalbad{
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  }
+  .batsu{
+    width:40px;
+    float:right;
+    margin-right:30px;
+  }
+  .modalbad p{
+    text-align: center;
+  }
+  .modalbad h1{
+    text-align: center;
+  }
+  .modal-content{
+  background-color: white;
+  width: 500px;
+  margin: 10% auto;
+  border-radius: 20px;
+  height: 400px;
+  }
+  #closeBtn2{
+    width:40px;
+    color: #ff6928;
+    float:right;
+  }
+  #closeBtn3{
+    width:40px;
+    color: #ff6928;
+    float:right;
+  }
+  #closeBtn4{
+    width:40px;
+    color: #ff6928;
+    float:right;
+  }
+  .modal-body p{
+    font-size:30px;
+  }
+.bad{
+  padding-top:20px;
+  height:100px;
+  text-align: center;
+}
+.bad img{
+  height:300px;
+  width:300px;
+}
+.bad h1{
+  width:80%;
+  font-size: 21px;
+  margin: auto;
+}
+.bad p{
+  margin-bottom:5px;
+  font-size: 19px;
+  margin-top:5px;
+  margin-bottom: 10px;
+  text-align: center;
+  height:40px;
+}

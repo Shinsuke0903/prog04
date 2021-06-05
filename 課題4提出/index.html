@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>食GO!!</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/sample.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- ヘッダーを書いていく -->
+    <header>
+      <h1>食GO!!</h1>
+    </header>
+    <main>
+      <!-- 全体の作成 -->
+      <div class="top-wrapper">
+        <!-- 上部左の設定 -->
+        <div class="items">
+          <!-- プロフィール写真の設定 -->
+          <div class="prof">
+            <div class="prof-image">
+              <img src="imgs/1.jpeg" alt="" class="prof-image1">
+            </div>
+            <p>Shinsuke</p>
+          </div>
+          <!-- 人数指定ボタンの作成(一人で、みんなで) -->
+          <div class="design">
+            <div class="design-botan">
+              <button id="me">ひとりで</button>
+              <button id="our">みんなで</button>
+            </div>
+          </div>
+          <!-- APIを用いて天気を表示する -->  
+          <div class="weather">
+            <!-- 今日の天気を表示する -->
+            <div class="today-weather">
+              <!-- 今日の日時を入れる場所 -->
+              <!-- 今日の日付 -->
+              <div id="cityName"></div><br> <!-- kashiwa -->
+              <div id="nowData"></div> <!-- 5月31日19時59分 -->
+              <br>
+              <div id="pattern"></div><br>
+              <div id="picture"></div>
+              <br>
+              <div id="temp"></div>
+            </div>
+            <div class="forecast">
+              <!-- 直近の天気を表示する -->
+              <div class="tomorrow">
+                <div id="forecast-time1">
+                </div>
+                <br>
+                <div id="forecast-weather1">
+                </div>
+                <br>
+                <div id="forecast-picture1">
+                </div>
+                <br>
+                <div id="forecast-temp1">
+                </div>
+              </div>
+              <!-- 直近から3時間後の天気を表示する -->
+              <div class="dayafter">
+                <div id="forecast-time2">
+                </div>
+                <br>
+                <div id="forecast-weather2">
+                </div>
+                <br>
+                <div id="forecast-picture2">
+                </div>
+                <br>
+                <div id="forecast-temp2">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 上部真ん中map部分の作成 -->
+        <div class="map">
+          <!-- MapArea -->
+          <div id="view"></div>
+          <div id="myMap" style="width:100%;height:100%;"></div>
+        </div>
+        <!-- 上部右画像部分の作成 -->
+        <div class="image">
+          <div class="image1">
+             <!-- 場所を保存する方法 -->
+            <h1>行った場所を保存しよう</h1>
+            <div class="past">
+              <br><br>
+              <div class="past1">
+                <p>場所</p>
+                <br>
+                <input type="text" id="activeimage1">
+                <br><br>
+                <p>コメント</p>
+                <br>
+                <input type="text" id="activeimage2">
+              </div>
+              <div class="past2">
+                <button id="images1">保存</button>
+              </div>
+            </div>
+            <div class="pastnext">
+                <!-- 保存した場所を表示する -->
+                <h1>これまでに行った場所を表示する</h1>
+                <div class="pastnext1">
+                  <button id="pastplace1">表示</button>
+                  <button id="pastplace2">非表示</button>
+                </div>
+            </div>
+               
+          </div>
+          <!-- チャット部分の装飾をする -->
+          <div class="image2">
+            <!-- 題目部分の設定 -->
+            <div class="robot">
+              <h1>chat</h1>
+            </div>
+            <!-- チャット中身部分の設定 -->
+            <div class="robotchat">
+              <!-- 自分が打った内容 -->
+              <div class="ai10">
+                <p id="talkme"></p>
+              </div>
+              <!-- 相手が打った内容(AIによる返答) -->
+              <div class="ai11">
+                <p id="talkapi__reply"></p> 
+              </div>
+            </div>
+            <!-- 送信ボタン部分の設定 -->
+            <div class="robotsend">
+              <div class="ai">
+                <input id="talkapi__input" type="input" placeholder="ここにテキストを入力"/>
+                <button id="talkapi__request" type="button">送信</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- モーダル部分を書いていく -->
+      <!-- 「りょう」のプロフィール -->
+      <div id="modal2" class="modalbad">
+        <div class="modal-content">
+          <div class="modal-body">
+            <!-- モーダルを閉じるボタン -->
+            <div class="batsu">
+                <input type="button" id="closeBtn2" value="×"> 
+            </div>
+            <div class="bad">
+              <div class="ryo">
+                <img src="imgs/5.jpeg" alt="">
+              </div><br>
+              <h1>りょう&nbsp;26歳&nbsp;男性</h1>
+              <p>最近太ってきたので始めました。<br>毎週土曜日の午後14時くらいに参加予定です!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 「りょう」の食事 -->
+      <div id="modal3" class="modalbad">
+        <div class="modal-content">
+          <div class="modal-body">
+            <!-- モーダルを閉じるボタン -->
+              <div class="batsu">
+                <input type="button" id="closeBtn3" value="×"> 
+              </div>
+            <div class="bad">
+              <div class="ryo">
+                <img src="imgs/3.jpeg" alt="">
+              </div><br>
+              <h1>吉野家の牛丼を食べました。</h1>
+              <p>カロリーとても高かったです。。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 「りょう」とのtalk -->
+      <div id="modal4" class="modalbad">
+        <div class="modal-content">
+          <div class="modal-body">
+            <!-- モーダルを閉じるボタン -->
+              <div class="batsu">
+                <input type="button" id="closeBtn4" value="×"> 
+              </div>
+            <div class="bad">
+              <div class="ryo">
+                <img src="imgs/6.png" alt="">
+              </div><br>
+              <h1>画面右下のTalkで話かけてみよう！</h1>
+              <p>人と繋がろう！</p>
+            </div>
+          </div>
+        </div>
+      </div>            
+    </main>
+    <!-- フッターの作成 -->
+    <footer>
+      <p class="last">copyrights 2021 Metalife All RIghts Reserved.</p>
+    </footer>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <!--   
+      <script src="js/jquery-2.1.3.min.js"></script>
+      <script src="js/action.js"></script>
+    JQuery -->
+      <!-- JQuery -->
+      <!--** 以下Firebase **-->
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <!-- 6.6.1に該当する箇所はfirebaseのバージョンですので更新されるたびに随時変わります🤗    8.6.2に変える必要がある -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+      <script src="js/syokugo.js"></script>
+      <!-- /MapArea -->
+      <!-- jQuery&GoogleMapsAPI -->
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ah09rxoHoMfDGlwhs8hKdsf6iKTzh81JHzQo9mU3AzIvpWSzVRT9R4mchbwbxRhB'
+        async defer></script>
+      <script src="js/BmapQuery.js"></script>
+  </body>
+</html>
